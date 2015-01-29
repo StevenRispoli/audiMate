@@ -1,0 +1,31 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<img src="assets/images/audiMate.svg">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3 col-sm-2 col-sm-offset-2 col-md-1 col-md-offset-4">
+			<button type="button" class="btn btn-default" id="play-pause" ng-model="playPause" ng-click="main.togglePlay(playPause)">
+				&#9655
+			</button>
+		</div>
+		<div class="col-xs-3 col-sm-2 col-md-1">
+			<button type="button" class="btn btn-default" id="stop" ng-click="main.stop()">
+				&#9633
+			</button>
+		</div>
+		<div class="col-xs-3 col-sm-2 col-md-1">
+			<button type="button" class="btn btn-default" id="clear" ng-click="main.clear()">
+				X
+			</button>
+		</div>
+		<div class="col-xs-3 col-sm-2 col-md-1">
+			<button type="button" class="btn btn-default" id="help" ng-click="main.toggleHelp()">
+				?
+			</button>
+		</div>
+	</div>
+</div>

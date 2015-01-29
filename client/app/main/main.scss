@@ -1,0 +1,84 @@
+$blue: rgb(0,153,255);
+$green: rgb(0,255,0);
+$red: rgb(255,0,0);
+$yellow: rgb(255,255,0);
+
+@font-face {
+    font-family: VeraMonoBold;
+    src: url(../assets/fonts/VeraMono-Bold.ttf);
+}
+
+body{
+    background-color: #000;
+    color: $blue;
+    font-family: VeraMonoBold;
+    font-weight: bold;
+}
+
+img{
+    display: block;
+    width: 80%;
+    margin: 0 auto 25px;
+    padding: 0;
+}
+
+.navbar-inverse {
+    .navbar-toggle {
+        border-color: $blue;
+        &:hover{
+            background-color: #000;
+        }
+        &:focus{
+            background-color: #000;
+            box-shadow: 0 0 20px $blue;
+        }
+        .icon-bar{
+            background-color: $blue;
+        }
+    }
+    @extend body;
+    border-color: #000;
+    margin: 0;
+    .navbar-nav a {
+        background-color: #000;
+        &:focus {
+            outline-color: $blue !important;
+        }
+    }
+    .navbar-nav .active > a {
+        background-color: #000;
+        color: $blue;
+        &:hover, &:focus{
+            background-color: #000;
+            outline-color: $blue;
+        } 
+    }
+}
+
+.btn.btn-default {
+    @extend body;
+    width: 100%;
+    margin: 0 auto 0;
+    border: 2px solid $blue;
+    &:hover{
+        @extend .btn.btn-default;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 10px $blue;
+    }
+    &.pause{
+        border-color: $yellow;
+        color: $yellow;
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 10px $yellow;
+        }
+        &:active{
+            box-shadow: 0 5px 5px #777 inset;
+        }
+    } 
+    &:active{
+        box-shadow: 0 5px 5px #777 inset;
+    }
+}
