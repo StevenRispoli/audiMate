@@ -4,15 +4,15 @@ angular.module('audiMateApp')
 .controller('MainCtrl', function ($scope, $http) {
 	var vm = this;
 	vm.togglePlay = togglePlay;
-	
+
 	$scope.playPause = false;
-	
+
 	function togglePlay(playPause){
 		$scope.playPause = !playPause;
 		if($scope.playPause)
-			$('#play-pause').html('&#9647&#9647').addClass('pause');
+			$('#play-pause').html('&#9647&#9647').addClass('pause').removeClass('play');
 		else
-			$('#play-pause').html('&#9655').removeClass('pause');
+			$('#play-pause').html('&#9655').addClass('play').removeClass('pause');
 	}
 });
 

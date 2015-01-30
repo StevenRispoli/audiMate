@@ -18,7 +18,7 @@ body{
 img{
     display: block;
     width: 80%;
-    margin: 0 auto 25px;
+    margin: 0 auto 5%;
     padding: 0;
 }
 
@@ -67,6 +67,17 @@ img{
         outline: none;
         box-shadow: 0 0 10px $blue;
     }
+    &.play{
+        border-color: $green;
+        color: $green;
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 10px $green;
+        }
+        &:active{
+            box-shadow: 0 5px 5px #777 inset;
+        }
+    } 
     &.pause{
         border-color: $yellow;
         color: $yellow;
