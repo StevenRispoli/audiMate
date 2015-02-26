@@ -17,9 +17,10 @@ body{
 
 img{
     display: block;
-    width: 80%;
-    margin: 0 auto 5%;
-    padding: 0;
+    width: 50%;
+    margin: 8px auto 0;
+    padding: 0 0 0 5%;
+    float: left;
 }
 
 .navbar-inverse {
@@ -55,7 +56,7 @@ img{
     }
 }
 
-.btn.btn-default {
+.btn.btn-default, .btn.btn-default.dropdown-toggle, .dropdown-menu {
     @extend body;
     width: 100%;
     margin: 0 auto 0;
@@ -91,5 +92,26 @@ img{
     } 
     &:active{
         box-shadow: 0 5px 5px #777 inset;
+    }
+
+    li > a{
+        color: $blue;
+        padding: 0 0 3px 12px;
+        &:hover{
+            color: #fff;
+            background-color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    div.mainLogo{
+        visibility: collapse;
+    }
+}
+
+@media screen and (min-width: 769px){
+    img.mainLogo{
+        visibility: collapse;
     }
 }

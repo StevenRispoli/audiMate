@@ -1,17 +1,47 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="rhythm">
+			<!-- Total Beats group -->
 			<div class="form-group">
-				<label for="total-beats">Total Beats:</label>
+				<label for="total-beats">Total Beats</label>
 				<input class="form-control" type="number" name="total-beats" min="1" max="64">
 			</div>
+			<!-- Keys groups -->
+			<div class="btn-group" dropdown is-open="keyIsOpen">
+				<button type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled">
+					Key <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-repeat="key in keys"><a href="#">{{key}}</a></li>
+				</ul>
+			</div>
+			<!-- Accented Beats group -->
 			<div class="form-group">
-				<label for="accented-beats">Accented Beats:</label>
+				<label for="accented-beats">Accented Beats</label>
 				<input class="form-control" type="number" name="accented-beats" min="1" max="64">
 			</div>
+			<!-- Octaves group -->
+			<div class="btn-group" dropdown is-open="octaveIsOpen">
+				<button type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled">
+					Octave <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-repeat="octave in octaves"><a href="#">{{octave}}</a></li>
+				</ul>
+			</div>
+			<!-- BPM group -->
 			<div class="form-group">
-				<label for="bpm">BPM:</label>
+				<label for="bpm">BPM</label>
 				<input class="form-control" type="number" name="bpm" min="1" max="500">
+			</div>
+			<!-- Types group -->
+			<div class="btn-group" dropdown is-open="typeIsOpen">
+				<button type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled">
+					Type <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-repeat="type in types"><a href="#">{{type}}</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

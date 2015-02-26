@@ -6,6 +6,12 @@ angular.module('audiMateApp')
 	vm.togglePlay = togglePlay;
 
 	$scope.playPause = false;
+	$scope.keyIsOpen = false;
+	$scope.octaveIsOpen = false;
+	$scope.typeIsOpen = false;
+	$scope.keys = ['A','A#','B','C','C#/D\u266D','D','D#/E\u266D','E','F','F#','G','G#/A\u266D'];
+	$scope.octaves = [1,2,3,4,5,6,7];
+	$scope.types = ["sine", "square", "sawtooth", "triangle"];
 
 	function togglePlay(playPause){
 		$scope.playPause = !playPause;
@@ -13,6 +19,10 @@ angular.module('audiMateApp')
 			$('#play-pause').html('&#9647&#9647').addClass('pause').removeClass('play');
 		else
 			$('#play-pause').html('&#9655').addClass('play').removeClass('pause');
+	}
+
+	function selectKey(key){
+
 	}
 });
 
