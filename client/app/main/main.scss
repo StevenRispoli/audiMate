@@ -17,9 +17,14 @@ body{
 
 img{
     display: block;
-    width: 80%;
-    margin: 0 auto 25px;
-    padding: 0;
+    width: 55%;
+    margin: 8px auto 0;
+    padding: 0 0 0 5%;
+    float: left;
+}
+
+.controls{
+    margin-top: 10%;
 }
 
 .navbar-inverse {
@@ -55,7 +60,7 @@ img{
     }
 }
 
-.btn.btn-default {
+.btn.btn-default, .btn.btn-default.dropdown-toggle, .dropdown-menu {
     @extend body;
     width: 100%;
     margin: 0 auto 0;
@@ -67,6 +72,17 @@ img{
         outline: none;
         box-shadow: 0 0 10px $blue;
     }
+    &.play{
+        border-color: $green;
+        color: $green;
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 10px $green;
+        }
+        &:active{
+            box-shadow: 0 5px 5px #777 inset;
+        }
+    } 
     &.pause{
         border-color: $yellow;
         color: $yellow;
@@ -80,5 +96,26 @@ img{
     } 
     &:active{
         box-shadow: 0 5px 5px #777 inset;
+    }
+
+    li > a{
+        color: $blue;
+        padding: 0 0 3px 12px;
+        &:hover{
+            color: #fff;
+            background-color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    div.logo{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+    img.logo{
+        display: none;
     }
 }

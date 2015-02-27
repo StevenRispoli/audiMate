@@ -1,0 +1,35 @@
+.rhythm{
+	margin-top: 5%;
+	border: 2px solid $blue;
+	border-radius: 4px;
+}
+
+label {
+	font-size: 1em;
+}
+
+.form-group {
+	display: inline-block;
+	width: 50%;
+	margin: 2% 1% 15px 5%;
+}
+
+.form-control{
+	width: 100%;
+	padding: 0 2px;
+	background-color: #000;
+	color: $green;
+}
+
+.btn-group{
+	margin-right: 5%;
+}
+
+.btn.btn-default.dropdown-toggle {
+    min-width: 100px;
+}
+
+ul.dropdown-menu {
+    min-width: 0;
+    padding: 0;
+}
