@@ -17,10 +17,14 @@ body{
 
 img{
     display: block;
-    width: 50%;
+    width: 55%;
     margin: 8px auto 0;
     padding: 0 0 0 5%;
     float: left;
+}
+
+.controls{
+    margin-top: 10%;
 }
 
 .navbar-inverse {
@@ -105,13 +109,13 @@ img{
 }
 
 @media screen and (max-width: 768px){
-    div.mainLogo{
-        visibility: collapse;
+    div.logo{
+        display: none;
     }
 }
 
 @media screen and (min-width: 769px){
-    img.mainLogo{
-        visibility: collapse;
+    img.logo{
+        display: none;
     }
 }
